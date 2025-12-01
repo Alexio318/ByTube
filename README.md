@@ -27,7 +27,8 @@ Um utilitário profissional, rápido e intuitivo para fazer download de playlist
 ✅ **Validação Automática** – Verifica a validade da playlist antes de iniciar o download  
 ✅ **Interface CLI Limpa** – Menu interativo e intuitivo, sem configurações complexas  
 ✅ **Barra de Progresso** – Acompanhamento visual do progresso do download  
-✅ **Zero Dependências Externas** – Tudo está incluído no executável compilado  
+✅ **Executáveis Pré-compilados** – Baixe e execute sem instalar Python  
+✅ **Logs Detalhados** – Rastreamento completo de operações para debugging  
 
 ---
 
@@ -36,26 +37,31 @@ Um utilitário profissional, rápido e intuitivo para fazer download de playlist
 | Recurso | Especificação |
 |---------|---------------|
 | **Conexão** | Internet ativa e estável |
-| **Sistema Operacional** | Windows 10/11 (64-bit) ou Linux (Ubuntu/Debian/etc) |
+| **Sistema Operacional** | Windows 10/11, Linux (Ubuntu/Debian/etc) ou macOS |
+| **Python** | ✅ **Python 3.8+** obrigatório para rodar do source |
+| **FFmpeg** | ✅ **Obrigatório** para processamento de áudio/vídeo |
 | **Espaço em Disco** | Conforme tamanho da playlist |
-| **Python** | ❌ **NÃO necessário** – Executável é self-contained |
 
 ---
 
 ## 📥 Instalação
 
-### Windows
+### Opção 1: Usar Executável Pré-compilado (Mais Rápido)
 
-1. Baixe o arquivo `youtube-downloader.exe` mais recente
+#### Windows
+
+1. Baixe o arquivo `youtube-downloader.exe` da seção [Releases](../../releases)
 2. Coloque em uma pasta de sua escolha
 3. Execute com duplo clique ou pelo terminal:
 ```bash
 .\youtube-downloader.exe
 ```
 
-### Linux
+**Vantagem:** Não precisa instalar Python ou dependências
 
-1. Baixe o arquivo `youtube-downloader`
+#### Linux
+
+1. Baixe o arquivo `youtube-downloader` da seção [Releases](../../releases)
 2. Conceda permissão de execução:
 ```bash
 chmod +x youtube-downloader
@@ -64,6 +70,122 @@ chmod +x youtube-downloader
 ```bash
 ./youtube-downloader
 ```
+
+**Vantagem:** Não precisa instalar Python ou dependências
+
+---
+
+### Opção 2: Rodar do Source Code (Para Desenvolvimento)
+
+#### Pré-requisitos
+
+- **Python 3.8+** instalado no seu sistema
+- **FFmpeg** instalado
+- **Git** para clonar o repositório
+
+#### Windows
+
+1. Clonar o repositório:
+```bash
+git clone https://github.com/Alexio318/ByTube.git
+cd ByTube
+```
+
+2. Criar ambiente virtual:
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+3. Instalar dependências:
+```bash
+pip install -r requirements.txt
+```
+
+4. Instalar FFmpeg:
+   - Baixe em: https://www.gyan.dev/ffmpeg/builds/
+   - Extraia em `C:\ffmpeg`
+   - Adicione `C:\ffmpeg\bin` ao PATH do Windows
+
+5. Executar:
+```bash
+python youtube_playlist_downloader_cli.py
+```
+
+#### Linux (Ubuntu/Debian)
+
+1. Clonar o repositório:
+```bash
+git clone https://github.com/Alexio318/ByTube.git
+cd ByTube
+```
+
+2. Criar ambiente virtual:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. Instalar dependências:
+```bash
+pip install -r requirements.txt
+```
+
+4. Instalar FFmpeg:
+```bash
+sudo apt update
+sudo apt install ffmpeg
+```
+
+5. Executar:
+```bash
+python youtube_playlist_downloader_cli.py
+```
+
+#### macOS
+
+1. Clonar o repositório:
+```bash
+git clone https://github.com/Alexio318/ByTube.git
+cd ByTube
+```
+
+2. Criar ambiente virtual:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. Instalar dependências:
+```bash
+pip install -r requirements.txt
+```
+
+4. Instalar FFmpeg:
+```bash
+brew install ffmpeg
+```
+
+5. Executar:
+```bash
+python youtube_playlist_downloader_cli.py
+```
+
+---
+
+## 🔨 Compilar seu Próprio Executável
+
+Se deseja criar um executável compilado localmente (sem precisar de Python instalado):
+
+```bash
+# Instalar PyInstaller
+pip install pyinstaller
+
+# Compilar usando a configuração existente
+pyinstaller youtube_playlist_downloader_cli.spec
+```
+
+O executável será gerado em `dist/youtube-downloader` (Linux) ou `dist/youtube-downloader.exe` (Windows)
 
 ---
 
@@ -223,6 +345,17 @@ Se encontrar um bug ou comportamento inesperado:
 | Linux | ✅ Estável |
 | macOS | 🔶 Experimental |
 | Manutenção | ✅ Ativa |
+
+---
+
+## 📦 Releases e Downloads
+
+As versões compiladas (executáveis) estão disponíveis na seção [Releases](../../releases) deste repositório:
+
+- **Windows:** `youtube-downloader.exe` (64-bit)
+- **Linux:** `youtube-downloader` (x86_64)
+
+Simplesmente faça download e execute. Nenhuma instalação necessária!
 
 ---
 
