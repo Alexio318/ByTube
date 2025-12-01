@@ -41,11 +41,12 @@ venv.bak/
 .DS_Store
 
 # PyInstaller
-*.spec
 build/
-dist/
-*.exe
-*.msi
+
+# Permitir dist/ e executáveis compilados para release
+# dist/
+# *.exe
+# *.msi
 
 # Downloads (pasta onde os vídeos serão salvos localmente)
 downloads/
