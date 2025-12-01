@@ -329,10 +329,18 @@ Se encontrar um bug ou comportamento inesperado:
 2. Descreva o problema com detalhes (SO, URL, erro exato)
 3. Abra uma **Issue** neste repositório com as informações
 
+### Contato do Desenvolvedor
+
+**Nome:** Alexio Mango  
+**Título:** Programador e Consultor Técnico  
+**Email:** alexio.mango@outlook.com  
+**Telefone:** 948996080
+
 ### Recursos
 
 - **GitHub Issues** – Para reportar bugs e solicitar features
-- **Documentação** – Verifique os exemplos de uso acima
+- **Documentação** – Verifique [ABOUT.md](ABOUT.md) para mais informações
+- **Exemplos de Uso** – Verifique a seção [Como Usar](#-como-usar)
 
 ---
 
@@ -369,5 +377,7 @@ Simplesmente faça download e execute. Nenhuma instalação necessária!
 ---
 
 **Desenvolvido com ❤️ e Python 3**
+
+**© 2025 Alexio Mango - Todos os Direitos Reservados**
 
 Última atualização: Dezembro de 2025

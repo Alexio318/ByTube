@@ -30,6 +30,32 @@ logger = logging.getLogger(__name__)
 
 
 # =====================================================
+#        INFORMAÇÕES DO DESENVOLVEDOR
+# =====================================================
+
+DEVELOPER_INFO = {
+    "name": "Alexio Mango",
+    "email": "alexio.mango@outlook.com",
+    "phone": "948996080",
+    "title": "Programador e Consultor Técnico",
+    "year": "2025"
+}
+
+
+def print_footer():
+    """Exibe footer profissional com informações de contato"""
+    footer = f"""
+{'='*60}
+📧 {DEVELOPER_INFO['name']} - {DEVELOPER_INFO['title']}
+   Email: {DEVELOPER_INFO['email']}
+   Tel: {DEVELOPER_INFO['phone']}
+   © {DEVELOPER_INFO['year']} - Todos os direitos reservados
+{'='*60}
+"""
+    return footer
+
+
+# =====================================================
 #        VERIFICADOR DE DEPENDÊNCIAS DO SISTEMA
 # =====================================================
 
@@ -318,10 +344,12 @@ def menu():
 
             print("\n🎉 Finalizado!")
             logger.info("Download finalizado com sucesso")
+            print(print_footer())
             input("\nENTER para voltar ao menu...")
 
         elif opcao == "2":
             print("\n👋 Saindo...")
+            print(print_footer())
             logger.info("Aplicação encerrada pelo usuário")
             time.sleep(1)
             break
