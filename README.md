@@ -334,7 +334,7 @@ Se encontrar um bug ou comportamento inesperado:
 **Nome:** Alexio Mango  
 **Título:** Programador e Consultor Técnico  
 **Email:** alexio.mango@outlook.com  
-**Telefone:** 948996080
+**WhatsApp/Telegram:** +244948996080
 
 ### Recursos
 
